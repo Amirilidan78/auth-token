@@ -17,7 +17,7 @@ class AuthServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__.'/../Migrations');
 
         $this->publishes([
-            __DIR__.'/../Configs/token_auth.php' => config_path('token_auth.php'),
+            __DIR__.'/../Configs/token_auth.php' => config_path('auth_token.php'),
         ]);
     }
 
