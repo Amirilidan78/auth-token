@@ -13,13 +13,10 @@
             "email": "amirilidan78@gmail.com"
         }
     ],
-    "require": {
-        "php": "^8.1" ,
-        "ext-json": "*"
-    },
+    "require": {},
     "config": {
         "sort-packages": true
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }
