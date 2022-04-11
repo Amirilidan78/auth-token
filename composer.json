@@ -2,6 +2,7 @@
     "name": "amirilidan78/auth-token",
     "description": "simple laravel authentication package",
     "keywords": ["laravel", "authentication", "auth"],
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Amirilidan78\\AuthToken\\": "src/"
@@ -16,6 +17,13 @@
     "require": {},
     "config": {
         "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Amirilidan78\\AuthToken\\AuthServiceProvider"
+            ]
+        }
     },
     "minimum-stability": "dev"
 }
