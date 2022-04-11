@@ -1,5 +1,5 @@
 {
-    "name": "Amirilidan78/auth-token",
+    "name": "amirilidan78/auth-token",
     "description": "simple laravel authentication package",
     "autoload": {
         "psr-4": {
