@@ -6,14 +6,11 @@ use Amirilidan78\AuthToken\Middleware\AuthTokenMiddleware;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Sanctum\Sanctum;
 
-class AuthServiceProvider extends ServiceProvider
+class AuthTokenServiceProvider extends ServiceProvider
 {
     public function register()
     {
         app('router')->aliasMiddleware('authentication', AuthTokenMiddleware::class);
-
-        if (! app()->configurationIsCached())
-            $this->mergeConfigFrom(__DIR__.'/../config/auth_token.php', 'auth_token');
     }
 
     public function boot()
@@ -21,8 +18,12 @@ class AuthServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
 
         $this->publishes([
+            __DIR__.'/../database/migrations' => database_path('migrations'),
+        ], 'auth-token-migration');
+
+        $this->publishes([
             __DIR__.'/../config/auth_token.php' => config_path('auth_token.php'),
-        ]);
+        ],'auth-token-config');
     }
 
 }

@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Amirilidan78\\AuthToken\\AuthServiceProvider"
+                "Amirilidan78\\AuthToken\\AuthTokenServiceProvider"
             ]
         }
     },
