@@ -1,6 +1,7 @@
 {
     "name": "amirilidan78/auth-token",
     "description": "simple laravel authentication package",
+    "keywords": ["laravel", "authentication", "auth"],
     "autoload": {
         "psr-4": {
             "Amirilidan78\\AuthToken\\": "src/"
@@ -12,5 +13,13 @@
             "email": "amirilidan78@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "^8.*" ,
+        "ext-json": "*"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
